@@ -56,6 +56,6 @@ app.use(function(err, req, res, next) {
   });
 });
 
-console.log(process.env.node_env);
+console.log(process.env.DB_URL);
 
 module.exports = app;
