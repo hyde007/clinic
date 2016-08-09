@@ -1,0 +1,94 @@
+   <div id="bookanappt" >
+        <h3>Book an appointment (New Patient)</h3>
+       <form class="form-horizontal" ng-submit="bookAppt()">
+            <div class="form-group">
+                <label for="inputEmail" class="control-label col-sm-2   ">First Name</label>
+                <div class="col-sm-4 col-md-4 col-lg-3">
+                    <input type="text" class="form-control" name="firstname" placeholder="...." maxlength="20" ng-model="firstname">
+                </div>
+                <label for="inputPassword" class="control-label col-sm-2">Last Name</label>
+                <div class="col-sm-4 col-md-4 col-lg-3">
+                    <input type="text" class="form-control" id="lastName" placeholder="...." maxlength="20" ng-model="lastname">
+                </div>
+            </div>
+            <div class="form-group">
+                 <label for="inputPassword" class="control-label col-sm-2">Phone #</label>
+                <div class="col-sm-4 col-md-4 col-lg-3">
+                    <input type="tel" class="form-control" id="phoneNumber" maxlength="10">
+                </div>
+                <label for="inputPassword" class="control-label col-sm-2">Email</label>
+                <div class="col-sm-4 col-md-4 col-lg-3">
+                    <input type="email" class="form-control" id="emailId" placeholder="xyz@abc.com">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword" class="control-label col-sm-2">DOB</label>
+                <div class="col-sm-4 col-md-4 col-lg-3">
+                    <input type="date" class="form-control" id="dateOfBirth" placeholder="....">
+                </div>
+                <label for="inputPassword" class="control-label col-sm-2">Gender</label>
+                <div class="col-sm-4 col-md-4 col-lg-3">
+                   <label class="radio-inline">
+                      <input type="radio" name="gender">Male
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="gender">Female
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword" class="control-label col-sm-2">Address</label>
+                <div class="col-sm-4 col-md-4 col-lg-3">
+                    <input type="text" class="form-control" id="address1" maxlength="100">
+                </div>
+                <label for="inputPassword" class="control-label col-sm-2"></label>
+                <div class="col-sm-4 col-md-4 col-lg-3">
+                    <input type="text" class="form-control" id="address2" maxlength="100">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword" class="control-label col-sm-2">City</label>
+                <div class="col-sm-4 col-md-4 col-lg-3">
+                    <input type="text" class="form-control" id="city" maxlength="10">
+                </div>
+                <label for="inputPassword" class="control-label col-sm-2">State</label>
+                <div class="col-sm-4 col-md-4 col-lg-3">
+                    <input type="text" class="form-control" id="state" maxlength="10">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword" class="control-label col-sm-2">Zip Code</label>
+                <div class="col-sm-4 col-md-4 col-lg-3">
+                    <input type="text" class="form-control" id="zipCode" maxlength="10">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword" class="control-label col-sm-2">Date & Time</label>
+                <div class="col-sm-4 col-md-4 col-lg-3">
+                    <input type="datetime-local" class="form-control" id="apptTime" maxlength="10">
+                </div>
+                <label for="inputPassword" class="control-label col-sm-2">Reason for visit</label>
+                <div class="col-sm-4 col-md-4 col-lg-3">
+                    <textarea rows="4" cols="50" class="form-control" id="reasonForVisit">
+                    </textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword" class="control-label col-sm-2">Assign to doctor</label>
+                <div class="col-sm-4 col-md-4 col-lg-3">
+                    <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle">Doctor's List</button>
+                    <ul class="dropdown-menu">
+                        <li ng-repeat="x in docList"><a href="{{x.docid}}">{{x.docname}}</a><li>
+                        <!--<li><a href="{{x.docid}}"></a></li>
+                        <li><a href="#">Namrata Sharath</a></li>-->
+                    </ul>
+                </div>
+             </div>
+             <div class="form-group">
+                <div class="control-label col-sm-2"></div>
+                <div class="col-sm-4 col-md-4 col-lg-3">
+                    <input type="submit" class="btn btn-primary">Book</button>
+                </div>
+             </div>
+        </form>
+        </div>

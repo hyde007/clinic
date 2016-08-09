@@ -1,0 +1,50 @@
+   <div id="lookUpPt"  class="col-sm-12 col-md-12 col-lg-12">
+            <h3>Look up patients</h3>
+            <form class="form-horizontal">
+            <div class="form-group">
+                <label for="inputEmail" class="control-label col-sm-2">Phone</label>
+                <div class="col-sm-2 col-md-2 col-lg-2">
+                    <input type="text" class="form-control" id="phone" placeholder="...." maxlength="20">
+                </div>
+                <label for="inputPassword" class="control-label col-sm-2">Email</label>
+                <div class="col-sm-2 col-md-2 col-lg-2">
+                    <input type="text" class="form-control" id="emailId" placeholder="...." maxlength="20">
+                </div>
+                <div class="col-sm-2 col-md-2 col-lg-2">
+                    <button type="submit" class="btn btn-primary" ng-click="lookUpPt()">Search</button>
+                </div>
+            </div>
+            <!--<div class="form-group">
+                <div class="control-label col-sm-2"></div>
+                <div class="col-sm-4 col-md-4 col-lg-3">
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </div>
+             </div>  -->
+            </form>
+
+            <div class="panel panel-default" id="searchResults" style="display:none">
+                <div class="panel-heading">Search Results</div>
+                <div class="table-responsive" > 
+                <table class="table" >
+                <thead>
+                    <tr>
+                        <th>Patient Name</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                     <tr ng-repeat="x in lookUpList" class="{{x.class}}" style="text-transform:capitalize">
+                        <td>{{x.name}}</td>
+                        <td>{{x.phone}}</td>
+                        <td>{{x.email}}</td>
+                    </tr>
+
+                </tbody>
+              </table>
+              </div>
+            </div>
+             <div class="panel panel-default" id="noResult" style="display:none">
+                    <div class="panel-heading">Patient Not found</div>
+              </div>
+        </div>

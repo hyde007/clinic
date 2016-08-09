@@ -1,0 +1,21 @@
+  <div id="homePage" class="col-sm-12 col-md-12 col-lg-12">
+            <h3>Today's Appointment</h3>
+              <table class="table">
+                <thead>
+                    <tr>
+                        <th>Patient Name</th>
+                        <th>Appointment Time</th>
+                        <th>Doctor</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr ng-repeat="x in $ctrl.patientlist" class="{{x.class}}" style="text-transform:capitalize">
+                        <td>{{x.name}}</td>
+                        <td>{{x.time}}</td>
+                        <td>{{x.assigneddoc}}</td>
+                    </tr>
+
+                </tbody>
+              </table>
+        </div>
